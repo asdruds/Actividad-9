@@ -59,3 +59,6 @@ Route::get('/courses/create', [courseController::class, 'create'])->name('course
 
 //Store
 Route::post('/courses', [courseController::class, 'store'])->name('courses.store');
+
+//Edit
+Route::post('/courses/{id}/edit', [courseController::class, 'edit'])->name('courses.edit');
