@@ -40,4 +40,11 @@ class courseController extends Controller
         return view("courses.show", ["course" => $course], ["category" => $category]);
     }
 
+    public function edit($id){
+
+        $course = Course::find($id); //SQL: SELECT FROM Course WHERE ID = ? LIMIT 1;
+        
+        return view("courses.edit", ["course" => $course]);
+    }
+
 }
