@@ -27,7 +27,11 @@
                 <li>{{ $course -> difficulty }}</li>
                 <li>{{ $course -> instructor }}</li>
                 <li> {{ $course -> email }}</li>
-                
+
+                <td class="action-cell">
+                <a class="edit-link" href="{{ route('courses.edit', $course->$id) }}">Edit</a>
+                </td>
+            
         </ul>
         @endforeach
 </div>
